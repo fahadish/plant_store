@@ -24,7 +24,13 @@ const TextStyle headline2 =TextStyle(
 const TextStyle headline3 =TextStyle(
   color: white,
     fontWeight: FontWeight.bold,
-    fontSize: 1.0
+    fontSize: 16.0
 
 );
 
+const TextStyle headline4 =TextStyle(
+    color: white,
+    fontWeight: FontWeight.w400,
+    fontSize: 14.0
+
+);

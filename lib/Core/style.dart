@@ -9,7 +9,7 @@ class Styles{
         thumbColor: MaterialStateProperty.all(green.withOpacity(0.5),),
         isAlwaysShown: true,
         mainAxisMargin: 200,
-        radius: Radius.circular(50.0),
+        radius: const Radius.circular(50.0),
         
       )
     );

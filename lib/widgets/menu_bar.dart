@@ -46,7 +46,7 @@ class _MenuBarState extends State<MenuBar> {
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        RotatedBox(quarterTurns: 3,child: Padding(padding: EdgeInsets.only(left: 25.0),child:
+        RotatedBox(quarterTurns: 3,child: Padding(padding: const EdgeInsets.only(left: 25.0),child:
           TextButton(onPressed: onTap,child: Text(text,style: buttonText,),)
           ,),),
         selectIndex == index?
@@ -55,10 +55,10 @@ class _MenuBarState extends State<MenuBar> {
               Container(
                 width: 35,
                 height: 110,
-                color: white,child: Center(
+                color: white,child: const Center(
                 child: CircleAvatar(backgroundColor: green,radius: 3,),
               ),
-              ),),) : SizedBox(
+              ),),) : const SizedBox(
           width: 35,height: 110,
         ),
 

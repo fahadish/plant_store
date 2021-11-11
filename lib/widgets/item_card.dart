@@ -4,6 +4,7 @@ import 'package:plant_store/Core/color.dart';
 import 'package:plant_store/Core/space.dart';
 import 'package:plant_store/Core/text_style.dart';
 import 'package:plant_store/data/plant.dart';
+import 'package:plant_store/pages/details_page.dart';
 
 class PlantItemCard extends StatelessWidget {
   final Plants plants;
@@ -12,10 +13,12 @@ class PlantItemCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (builder) =>DetailsPage(plants: plants) ));
+      },
       child: Container(
         height: 400.0,
-        margin: EdgeInsets.only(right: 10.0),
+        margin: const EdgeInsets.only(right: 10.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -23,21 +26,21 @@ class PlantItemCard extends StatelessWidget {
               plants.images[0],
               height: 250.0,
             ),
-            SpaceVH(
+            const SpaceVH(
               height: 20.0,
             ),
             Text(
               plants.name,
               style: headline2,
             ),
-            SpaceVH(
+            const SpaceVH(
               height: 2.5,
             ),
             Text(
               plants.description,
               maxLines: 2,
             ),
-            SpaceVH(
+            const SpaceVH(
               height: 20.0,
             ),
             Row(
@@ -47,7 +50,7 @@ class PlantItemCard extends StatelessWidget {
                   plants.price,
                   style: headline2,
                 ),
-                SpaceVH(
+                const SpaceVH(
                   width: 20.0,
                 ),
                 Container(
@@ -60,9 +63,9 @@ class PlantItemCard extends StatelessWidget {
                         BoxShadow(
                             color: black.withOpacity(0.3),
                             blurRadius: 10.0,
-                            offset: Offset(1, 6))
+                            offset: const Offset(1, 6))
                       ]),
-                  child: Icon(Icons.add,size: 10.0,),
+                  child: const Icon(Icons.add,size: 10.0,),
                 )
               ],
             )

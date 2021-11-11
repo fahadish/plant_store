@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:plant_store/Core/text_style.dart';
 import 'package:plant_store/core/color.dart';
 import 'package:plant_store/data/plant.dart';
+import 'package:plant_store/widgets/custom_appbar.dart';
 import 'package:plant_store/widgets/item_card.dart';
 import 'package:plant_store/widgets/menu_bar.dart';
 
@@ -30,8 +32,8 @@ class _HomePageState extends State<HomePage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Green'),
-                      Text(
+                      const Text('Green'),
+                      const Text(
                         'Plants',
                         style: headline1,
                       ),
@@ -40,7 +42,7 @@ class _HomePageState extends State<HomePage> {
                           child:
                           ListView.builder(
                               itemCount: plant.length,
-                              physics: BouncingScrollPhysics(),
+                              physics: const BouncingScrollPhysics(),
                               itemBuilder: (itemBuilder, index) { final plants = plant[index];
                         return PlantItemCard(plants: plants,);
                       })))
@@ -49,8 +51,9 @@ class _HomePageState extends State<HomePage> {
                 ))
               ],
             ),
-            
-            Align(alignment: Alignment.topCenter,)
+const CustomAppBar(),
+            Align(alignment: Alignment.bottomLeft,child: TextButton(onPressed: (){},child: SvgPicture.asset('assets/icon/home.svg',height: 25,color: white,),)
+              )
           ],
         ),
       ),
